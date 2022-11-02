@@ -13,8 +13,6 @@ const array2 = [
     ];
 
 const result = [];
-    
-function multiplication (){
 
 const flat1 = array1.flat();
 let flat2 = [];
@@ -30,7 +28,14 @@ for (let i = 0; i<flat1.length; i++){
     result[i] = flat1[i] * flat2[i]
 }
 
-return result;
 
-}
+//Convierte el array result en un array de strings con números de 3 cifras y completando con ceros a la izquierda los números que tengan menos de 3 cifras
+
+const newArray = result.map((number) => {
+    if(number.length >= 3) {
+    return number.toString();
+    } else {
+        return number.toString().padStart(3, '0');
+    }
+});
 
