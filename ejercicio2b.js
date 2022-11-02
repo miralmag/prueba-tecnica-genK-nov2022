@@ -1,5 +1,8 @@
 'use strict';
 
+const resultText = document.querySelector('.result');
+const newArrayText = document.querySelector('.newArray');
+
 const array1 = [
     [1, 3, 5],
     [7, 9, 7],
@@ -38,4 +41,8 @@ const newArray = result.map((number) => {
         return number.toString().padStart(3, '0');
     }
 });
+
+resultText.innerHTML = `Los valores de "result" son: ${result}`
+
+newArrayText.innerHTML = `Los valores de "newArray" son: ${newArray}`
 
