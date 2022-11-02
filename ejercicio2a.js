@@ -1,5 +1,7 @@
 'use strict';
 
+const resultText = document.querySelector('.result');
+
 const array1 = [
     [1, 3, 5],
     [7, 9, 7],
@@ -31,3 +33,7 @@ for (let i = 0; i<flat1.length; i++){
 return result;
 
 }
+
+multiplication();
+
+resultText.innerHTML = `Los valores de "result" son: ${result}`
